@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA38603A18634B1C00C5C65E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA38603918634B1C00C5C65E /* UIKit.framework */; };
+		DA38603C18634B1C00C5C65E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA38603B18634B1C00C5C65E /* Foundation.framework */; };
+		DA38603E18634B1C00C5C65E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA38603D18634B1C00C5C65E /* CoreGraphics.framework */; };
+		DA38604418634B1C00C5C65E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA38604218634B1C00C5C65E /* InfoPlist.strings */; };
+		DA38604618634B1C00C5C65E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38604518634B1C00C5C65E /* main.m */; };
+		DA38604A18634B1C00C5C65E /* BCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38604918634B1C00C5C65E /* BCAppDelegate.m */; };
+		DA38604C18634B1C00C5C65E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DA38604B18634B1C00C5C65E /* Default.png */; };
+		DA38604E18634B1C00C5C65E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA38604D18634B1C00C5C65E /* Default@2x.png */; };
+		DA38605018634B1C00C5C65E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA38604F18634B1C00C5C65E /* Default-568h@2x.png */; };
+		DA3860581863504800C5C65E /* BCAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3860571863504800C5C65E /* BCAppInfo.m */; };
+		DA38605C1863509A00C5C65E /* BCAppInfoUpdateCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38605B1863509A00C5C65E /* BCAppInfoUpdateCenter.m */; };
+		DA38605F186350AD00C5C65E /* BCAppInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38605E186350AD00C5C65E /* BCAppInfoManager.m */; };
+		DA3860641863528200C5C65E /* BCCurrentUsr.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3860631863528200C5C65E /* BCCurrentUsr.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA38603618634B1C00C5C65E /* DotSystemPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotSystemPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA38603918634B1C00C5C65E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DA38603B18634B1C00C5C65E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA38603D18634B1C00C5C65E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA38604118634B1C00C5C65E /* DotSystemPro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DotSystemPro-Info.plist"; sourceTree = "<group>"; };
+		DA38604318634B1C00C5C65E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA38604518634B1C00C5C65E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA38604718634B1C00C5C65E /* DotSystemPro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DotSystemPro-Prefix.pch"; sourceTree = "<group>"; };
+		DA38604818634B1C00C5C65E /* BCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCAppDelegate.h; sourceTree = "<group>"; };
+		DA38604918634B1C00C5C65E /* BCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCAppDelegate.m; sourceTree = "<group>"; };
+		DA38604B18634B1C00C5C65E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DA38604D18634B1C00C5C65E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DA38604F18634B1C00C5C65E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DA3860561863504800C5C65E /* BCAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCAppInfo.h; path = dotsys/BCAppInfo.h; sourceTree = "<group>"; };
+		DA3860571863504800C5C65E /* BCAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCAppInfo.m; path = dotsys/BCAppInfo.m; sourceTree = "<group>"; };
+		DA38605A1863509A00C5C65E /* BCAppInfoUpdateCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCAppInfoUpdateCenter.h; path = dotsys/BCAppInfoUpdateCenter.h; sourceTree = "<group>"; };
+		DA38605B1863509A00C5C65E /* BCAppInfoUpdateCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCAppInfoUpdateCenter.m; path = dotsys/BCAppInfoUpdateCenter.m; sourceTree = "<group>"; };
+		DA38605D186350AD00C5C65E /* BCAppInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAppInfoManager.h; sourceTree = "<group>"; };
+		DA38605E186350AD00C5C65E /* BCAppInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAppInfoManager.m; sourceTree = "<group>"; };
+		DA3860611863516400C5C65E /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
+		DA3860621863528200C5C65E /* BCCurrentUsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCurrentUsr.h; sourceTree = "<group>"; };
+		DA3860631863528200C5C65E /* BCCurrentUsr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCurrentUsr.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA38603318634B1C00C5C65E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA38603A18634B1C00C5C65E /* UIKit.framework in Frameworks */,
+				DA38603C18634B1C00C5C65E /* Foundation.framework in Frameworks */,
+				DA38603E18634B1C00C5C65E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA38602D18634B1C00C5C65E = {
+			isa = PBXGroup;
+			children = (
+				DA38603F18634B1C00C5C65E /* DotSystemPro */,
+				DA38603818634B1C00C5C65E /* Frameworks */,
+				DA38603718634B1C00C5C65E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA38603718634B1C00C5C65E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA38603618634B1C00C5C65E /* DotSystemPro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA38603818634B1C00C5C65E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA38603918634B1C00C5C65E /* UIKit.framework */,
+				DA38603B18634B1C00C5C65E /* Foundation.framework */,
+				DA38603D18634B1C00C5C65E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA38603F18634B1C00C5C65E /* DotSystemPro */ = {
+			isa = PBXGroup;
+			children = (
+				DA38604818634B1C00C5C65E /* BCAppDelegate.h */,
+				DA38604918634B1C00C5C65E /* BCAppDelegate.m */,
+				DA3860601863513D00C5C65E /* utilities */,
+				DA3860591863505200C5C65E /* dotsys */,
+				DA38604018634B1C00C5C65E /* Supporting Files */,
+			);
+			path = DotSystemPro;
+			sourceTree = "<group>";
+		};
+		DA38604018634B1C00C5C65E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA38604118634B1C00C5C65E /* DotSystemPro-Info.plist */,
+				DA38604218634B1C00C5C65E /* InfoPlist.strings */,
+				DA38604518634B1C00C5C65E /* main.m */,
+				DA38604718634B1C00C5C65E /* DotSystemPro-Prefix.pch */,
+				DA38604B18634B1C00C5C65E /* Default.png */,
+				DA38604D18634B1C00C5C65E /* Default@2x.png */,
+				DA38604F18634B1C00C5C65E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA3860591863505200C5C65E /* dotsys */ = {
+			isa = PBXGroup;
+			children = (
+				DA3860561863504800C5C65E /* BCAppInfo.h */,
+				DA3860571863504800C5C65E /* BCAppInfo.m */,
+				DA38605A1863509A00C5C65E /* BCAppInfoUpdateCenter.h */,
+				DA38605B1863509A00C5C65E /* BCAppInfoUpdateCenter.m */,
+				DA38605D186350AD00C5C65E /* BCAppInfoManager.h */,
+				DA38605E186350AD00C5C65E /* BCAppInfoManager.m */,
+			);
+			name = dotsys;
+			sourceTree = "<group>";
+		};
+		DA3860601863513D00C5C65E /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DA3860611863516400C5C65E /* Notifications.h */,
+				DA3860621863528200C5C65E /* BCCurrentUsr.h */,
+				DA3860631863528200C5C65E /* BCCurrentUsr.m */,
+			);
+			name = utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA38603518634B1C00C5C65E /* DotSystemPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA38605318634B1C00C5C65E /* Build configuration list for PBXNativeTarget "DotSystemPro" */;
+			buildPhases = (
+				DA38603218634B1C00C5C65E /* Sources */,
+				DA38603318634B1C00C5C65E /* Frameworks */,
+				DA38603418634B1C00C5C65E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DotSystemPro;
+			productName = DotSystemPro;
+			productReference = DA38603618634B1C00C5C65E /* DotSystemPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA38602E18634B1C00C5C65E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BC;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Bruce Chen";
+			};
+			buildConfigurationList = DA38603118634B1C00C5C65E /* Build configuration list for PBXProject "DotSystemPro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA38602D18634B1C00C5C65E;
+			productRefGroup = DA38603718634B1C00C5C65E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA38603518634B1C00C5C65E /* DotSystemPro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA38603418634B1C00C5C65E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA38604418634B1C00C5C65E /* InfoPlist.strings in Resources */,
+				DA38604C18634B1C00C5C65E /* Default.png in Resources */,
+				DA38604E18634B1C00C5C65E /* Default@2x.png in Resources */,
+				DA38605018634B1C00C5C65E /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA38603218634B1C00C5C65E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA38604618634B1C00C5C65E /* main.m in Sources */,
+				DA38604A18634B1C00C5C65E /* BCAppDelegate.m in Sources */,
+				DA3860581863504800C5C65E /* BCAppInfo.m in Sources */,
+				DA38605C1863509A00C5C65E /* BCAppInfoUpdateCenter.m in Sources */,
+				DA38605F186350AD00C5C65E /* BCAppInfoManager.m in Sources */,
+				DA3860641863528200C5C65E /* BCCurrentUsr.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA38604218634B1C00C5C65E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA38604318634B1C00C5C65E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA38605118634B1C00C5C65E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DA38605218634B1C00C5C65E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA38605418634B1C00C5C65E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DotSystemPro/DotSystemPro-Prefix.pch";
+				INFOPLIST_FILE = "DotSystemPro/DotSystemPro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA38605518634B1C00C5C65E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DotSystemPro/DotSystemPro-Prefix.pch";
+				INFOPLIST_FILE = "DotSystemPro/DotSystemPro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA38603118634B1C00C5C65E /* Build configuration list for PBXProject "DotSystemPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA38605118634B1C00C5C65E /* Debug */,
+				DA38605218634B1C00C5C65E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA38605318634B1C00C5C65E /* Build configuration list for PBXNativeTarget "DotSystemPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA38605418634B1C00C5C65E /* Debug */,
+				DA38605518634B1C00C5C65E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA38602E18634B1C00C5C65E /* Project object */;
+}
