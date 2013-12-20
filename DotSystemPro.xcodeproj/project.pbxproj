@@ -61,6 +61,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA35E03F18645BEC006BCAAD /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
 		DA38602D18634B1C00C5C65E = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +100,7 @@
 			children = (
 				DA38604818634B1C00C5C65E /* BCAppDelegate.h */,
 				DA38604918634B1C00C5C65E /* BCAppDelegate.m */,
+				DA35E03F18645BEC006BCAAD /* network */,
 				DA3860601863513D00C5C65E /* utilities */,
 				DA3860591863505200C5C65E /* dotsys */,
 				DA38604018634B1C00C5C65E /* Supporting Files */,
@@ -321,6 +329,7 @@
 				DA38605518634B1C00C5C65E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

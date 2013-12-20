@@ -6,8 +6,8 @@
 //  Copyright (c) 2013年 Bruce Chen. All rights reserved.
 //
 
-#import "BCAppInfoUpdateCenter.h"
-#import "BCAppInfoManager.h"
+#import  "BCAppInfoUpdateCenter.h"
+#import  "BCAppInfoManager.h"
 #include "Notifications.h"
 
 @implementation BCAppInfoUpdateCenter
@@ -34,10 +34,29 @@
     return self;
 }
 
+- (id)init
+{
+    NSAssert(NO, @"Use the sharedInstance instead!");
+    return nil;
+}
+
 - (void)onLoginSuccess
 {
-    if (_appInfoManger) { [_appInfoManger release]; }
+    if(_appInfoManger){
+        [_appInfoManger release];
+        _appInfoManger = nil;
+    }
     _appInfoManger = [[BCAppInfoManager instance] retain];;
 }
 
+#pragma mark - Cleanup
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    if(_appInfoManger){
+        [_appInfoManger release];
+        _appInfoManger = nil;
+    }
+    [super dealloc];
+}
 @end

@@ -19,8 +19,8 @@ static NSString *KBCAppInfoPath;
     self = [super init];
     if (self) {
         _appID = appID;
-        _flag = 0;
-        _path = [[NSString alloc] init];
+        _flag  = 0;
+        _path  = [[NSString alloc] init];
     }
     return self;
 }
@@ -41,8 +41,8 @@ static NSString *KBCAppInfoPath;
     self = [super init];
     if (self) {
         @try {
-            _appID = [aDecoder decodeInt32ForKey:KBCAppInfoAppID];
-            _flag  = [aDecoder decodeInt32ForKey:KBCAppInfoFLag];
+            _appID = [aDecoder  decodeInt32ForKey:KBCAppInfoAppID];
+            _flag  = [aDecoder  decodeInt32ForKey:KBCAppInfoFLag];
             _path  = [[aDecoder decodeObjectForKey:KBCAppInfoPath] retain];
         }
         @catch (NSException *exception) {
@@ -57,7 +57,7 @@ static NSString *KBCAppInfoPath;
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeInt32:self.appID forKey:KBCAppInfoAppID];
-    [aCoder encodeInt32:self.flag forKey:KBCAppInfoFLag];
+    [aCoder encodeInt32:self.flag  forKey:KBCAppInfoFLag];
     [aCoder encodeObject:self.path forKey:KBCAppInfoPath];
 }
 @end
