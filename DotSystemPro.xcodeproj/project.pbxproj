@@ -20,6 +20,7 @@
 		DA38605C1863509A00C5C65E /* BCAppInfoUpdateCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38605B1863509A00C5C65E /* BCAppInfoUpdateCenter.m */; };
 		DA38605F186350AD00C5C65E /* BCAppInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38605E186350AD00C5C65E /* BCAppInfoManager.m */; };
 		DA3860641863528200C5C65E /* BCCurrentUsr.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3860631863528200C5C65E /* BCCurrentUsr.m */; };
+		DA53357118672A08006B617F /* BCAppInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA53357018672A08006B617F /* BCAppInitializer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		DA3860611863516400C5C65E /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		DA3860621863528200C5C65E /* BCCurrentUsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCurrentUsr.h; sourceTree = "<group>"; };
 		DA3860631863528200C5C65E /* BCCurrentUsr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCurrentUsr.m; sourceTree = "<group>"; };
+		DA53356F18672A08006B617F /* BCAppInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAppInitializer.h; sourceTree = "<group>"; };
+		DA53357018672A08006B617F /* BCAppInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAppInitializer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +101,8 @@
 		DA38603F18634B1C00C5C65E /* DotSystemPro */ = {
 			isa = PBXGroup;
 			children = (
-				DA38604818634B1C00C5C65E /* BCAppDelegate.h */,
-				DA38604918634B1C00C5C65E /* BCAppDelegate.m */,
+				DA53356E186729DA006B617F /* app */,
+				DA53357218672B4B006B617F /* UI */,
 				DA35E03F18645BEC006BCAAD /* network */,
 				DA3860601863513D00C5C65E /* utilities */,
 				DA3860591863505200C5C65E /* dotsys */,
@@ -143,6 +146,24 @@
 				DA3860631863528200C5C65E /* BCCurrentUsr.m */,
 			);
 			name = utilities;
+			sourceTree = "<group>";
+		};
+		DA53356E186729DA006B617F /* app */ = {
+			isa = PBXGroup;
+			children = (
+				DA38604818634B1C00C5C65E /* BCAppDelegate.h */,
+				DA38604918634B1C00C5C65E /* BCAppDelegate.m */,
+				DA53356F18672A08006B617F /* BCAppInitializer.h */,
+				DA53357018672A08006B617F /* BCAppInitializer.m */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		DA53357218672B4B006B617F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +238,7 @@
 				DA38605C1863509A00C5C65E /* BCAppInfoUpdateCenter.m in Sources */,
 				DA38605F186350AD00C5C65E /* BCAppInfoManager.m in Sources */,
 				DA3860641863528200C5C65E /* BCCurrentUsr.m in Sources */,
+				DA53357118672A08006B617F /* BCAppInitializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
