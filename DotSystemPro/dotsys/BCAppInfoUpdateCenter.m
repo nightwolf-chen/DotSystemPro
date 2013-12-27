@@ -9,6 +9,7 @@
 #import  "BCAppInfoUpdateCenter.h"
 #import  "BCAppInfoManager.h"
 #include "Notifications.h"
+#import "BCCurrentUsr.h"
 
 @implementation BCAppInfoUpdateCenter
 
@@ -26,10 +27,7 @@
 {
     self = [super init];
     if (self) {
-        _appInfoManger = [[BCAppInfoManager instance] retain];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(onLoginSuccess)
-                                                     name:LoginSuccessNotification object:nil];
+        _appInfoDic = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -40,13 +38,15 @@
     return nil;
 }
 
-- (void)onLoginSuccess
+- (BCAppInfoManager *)appInfoManger
 {
-    if(_appInfoManger){
-        [_appInfoManger release];
-        _appInfoManger = nil;
+    NSString *uin = [[BCCurrentUsr GetInstance] uin];
+    if (![_appInfoDic objectForKey:uin]) {
+        BCAppInfoManager *appInfoManager = [BCAppInfoManager instance];
+        [_appInfoDic setObject:appInfoManager forKey:uin];
     }
-    _appInfoManger = [[BCAppInfoManager instance] retain];;
+    
+    return [_appInfoDic objectForKey:uin];
 }
 
 #pragma mark - Cleanup

@@ -11,8 +11,11 @@
 @class BCAppInfoManager;
 
 @interface BCAppInfoUpdateCenter : NSObject
+{
+    NSMutableDictionary *_appInfoDic;
+}
 
-@property (nonatomic,strong) BCAppInfoManager *appInfoManger;
+@property (nonatomic,retain) BCAppInfoManager *appInfoManger;
 
 + (id)sharedInstance;
 
