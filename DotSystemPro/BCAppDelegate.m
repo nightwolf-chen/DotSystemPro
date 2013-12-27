@@ -8,6 +8,7 @@
 
 #import "BCAppDelegate.h"
 #import "BCAppInitializer.h"
+#import "BCTabBarController.h"
 
 @implementation BCAppDelegate
 
@@ -25,6 +26,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    BCTabBarController *tabBarController = [[BCTabBarController alloc] initWithNibName:nil bundle:nil];
+    
+    self.window.rootViewController = tabBarController;
+    
+    [tabBarController release];
     
     return YES;
 }

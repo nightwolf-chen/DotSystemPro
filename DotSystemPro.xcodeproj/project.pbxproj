@@ -20,6 +20,16 @@
 		DA38605C1863509A00C5C65E /* BCAppInfoUpdateCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38605B1863509A00C5C65E /* BCAppInfoUpdateCenter.m */; };
 		DA38605F186350AD00C5C65E /* BCAppInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38605E186350AD00C5C65E /* BCAppInfoManager.m */; };
 		DA3860641863528200C5C65E /* BCCurrentUsr.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3860631863528200C5C65E /* BCCurrentUsr.m */; };
+		DA431AAD186D98FF00E36473 /* BCContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA431AAB186D98FF00E36473 /* BCContactViewController.m */; };
+		DA431AAE186D98FF00E36473 /* BCContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA431AAC186D98FF00E36473 /* BCContactViewController.xib */; };
+		DA431AB7186D997900E36473 /* BCMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA431AB5186D997800E36473 /* BCMessageViewController.m */; };
+		DA431AB8186D997900E36473 /* BCMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA431AB6186D997900E36473 /* BCMessageViewController.xib */; };
+		DA431ABC186D999400E36473 /* BCRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA431ABA186D999400E36473 /* BCRecommendViewController.m */; };
+		DA431ABD186D999400E36473 /* BCRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA431ABB186D999400E36473 /* BCRecommendViewController.xib */; };
+		DA431AC1186D99A400E36473 /* BCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA431ABF186D99A400E36473 /* BCSettingViewController.m */; };
+		DA431AC2186D99A400E36473 /* BCSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA431AC0186D99A400E36473 /* BCSettingViewController.xib */; };
+		DA431AC6186D9AD500E36473 /* BCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA431AC4186D9AD500E36473 /* BCTabBarController.m */; };
+		DA431AC7186D9AD500E36473 /* BCTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA431AC5186D9AD500E36473 /* BCTabBarController.xib */; };
 		DA53357118672A08006B617F /* BCAppInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA53357018672A08006B617F /* BCAppInitializer.m */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +56,21 @@
 		DA3860611863516400C5C65E /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		DA3860621863528200C5C65E /* BCCurrentUsr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCurrentUsr.h; sourceTree = "<group>"; };
 		DA3860631863528200C5C65E /* BCCurrentUsr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCurrentUsr.m; sourceTree = "<group>"; };
+		DA431AAA186D98FF00E36473 /* BCContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCContactViewController.h; sourceTree = "<group>"; };
+		DA431AAB186D98FF00E36473 /* BCContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCContactViewController.m; sourceTree = "<group>"; };
+		DA431AAC186D98FF00E36473 /* BCContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCContactViewController.xib; sourceTree = "<group>"; };
+		DA431AB4186D997800E36473 /* BCMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMessageViewController.h; sourceTree = "<group>"; };
+		DA431AB5186D997800E36473 /* BCMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMessageViewController.m; sourceTree = "<group>"; };
+		DA431AB6186D997900E36473 /* BCMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCMessageViewController.xib; sourceTree = "<group>"; };
+		DA431AB9186D999400E36473 /* BCRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRecommendViewController.h; sourceTree = "<group>"; };
+		DA431ABA186D999400E36473 /* BCRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCRecommendViewController.m; sourceTree = "<group>"; };
+		DA431ABB186D999400E36473 /* BCRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCRecommendViewController.xib; sourceTree = "<group>"; };
+		DA431ABE186D99A400E36473 /* BCSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSettingViewController.h; sourceTree = "<group>"; };
+		DA431ABF186D99A400E36473 /* BCSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSettingViewController.m; sourceTree = "<group>"; };
+		DA431AC0186D99A400E36473 /* BCSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCSettingViewController.xib; sourceTree = "<group>"; };
+		DA431AC3186D9AD400E36473 /* BCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTabBarController.h; sourceTree = "<group>"; };
+		DA431AC4186D9AD500E36473 /* BCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTabBarController.m; sourceTree = "<group>"; };
+		DA431AC5186D9AD500E36473 /* BCTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCTabBarController.xib; sourceTree = "<group>"; };
 		DA53356F18672A08006B617F /* BCAppInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAppInitializer.h; sourceTree = "<group>"; };
 		DA53357018672A08006B617F /* BCAppInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAppInitializer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +187,21 @@
 		DA53357218672B4B006B617F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DA431AC3186D9AD400E36473 /* BCTabBarController.h */,
+				DA431AC4186D9AD500E36473 /* BCTabBarController.m */,
+				DA431AC5186D9AD500E36473 /* BCTabBarController.xib */,
+				DA431AB4186D997800E36473 /* BCMessageViewController.h */,
+				DA431AB5186D997800E36473 /* BCMessageViewController.m */,
+				DA431AB6186D997900E36473 /* BCMessageViewController.xib */,
+				DA431AAA186D98FF00E36473 /* BCContactViewController.h */,
+				DA431AAB186D98FF00E36473 /* BCContactViewController.m */,
+				DA431AAC186D98FF00E36473 /* BCContactViewController.xib */,
+				DA431AB9186D999400E36473 /* BCRecommendViewController.h */,
+				DA431ABA186D999400E36473 /* BCRecommendViewController.m */,
+				DA431ABB186D999400E36473 /* BCRecommendViewController.xib */,
+				DA431ABE186D99A400E36473 /* BCSettingViewController.h */,
+				DA431ABF186D99A400E36473 /* BCSettingViewController.m */,
+				DA431AC0186D99A400E36473 /* BCSettingViewController.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -222,6 +262,11 @@
 				DA38604C18634B1C00C5C65E /* Default.png in Resources */,
 				DA38604E18634B1C00C5C65E /* Default@2x.png in Resources */,
 				DA38605018634B1C00C5C65E /* Default-568h@2x.png in Resources */,
+				DA431AAE186D98FF00E36473 /* BCContactViewController.xib in Resources */,
+				DA431AB8186D997900E36473 /* BCMessageViewController.xib in Resources */,
+				DA431ABD186D999400E36473 /* BCRecommendViewController.xib in Resources */,
+				DA431AC2186D99A400E36473 /* BCSettingViewController.xib in Resources */,
+				DA431AC7186D9AD500E36473 /* BCTabBarController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +284,11 @@
 				DA38605F186350AD00C5C65E /* BCAppInfoManager.m in Sources */,
 				DA3860641863528200C5C65E /* BCCurrentUsr.m in Sources */,
 				DA53357118672A08006B617F /* BCAppInitializer.m in Sources */,
+				DA431AAD186D98FF00E36473 /* BCContactViewController.m in Sources */,
+				DA431AB7186D997900E36473 /* BCMessageViewController.m in Sources */,
+				DA431ABC186D999400E36473 /* BCRecommendViewController.m in Sources */,
+				DA431AC1186D99A400E36473 /* BCSettingViewController.m in Sources */,
+				DA431AC6186D9AD500E36473 /* BCTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

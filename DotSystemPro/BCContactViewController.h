@@ -1,5 +1,5 @@
 //
-//  BCTabBarController.h
+//  BCContactViewController.h
 //  DotSystemPro
 //
 //  Created by Bruce Chen on 13-12-27.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BCTabBarController : UITabBarController
+@interface BCContactViewController : UIViewController
 
 @end

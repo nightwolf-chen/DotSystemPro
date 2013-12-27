@@ -1,5 +1,5 @@
 //
-//  BCTabBarController.h
+//  BCRecommendViewController.h
 //  DotSystemPro
 //
 //  Created by Bruce Chen on 13-12-27.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BCTabBarController : UITabBarController
+@interface BCRecommendViewController : UIViewController
 
 @end
