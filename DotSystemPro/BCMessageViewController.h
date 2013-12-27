@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BCMessageViewController : UIViewController
+@interface BCMessageViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
+@property (retain, nonatomic) IBOutlet UITableView *tableView;
 @end

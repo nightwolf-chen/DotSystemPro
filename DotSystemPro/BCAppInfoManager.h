@@ -12,9 +12,9 @@
 
 @interface BCAppInfoManager : NSObject<NSCoding,NSCopying>
 
-@property (nonatomic,strong) NSString *filePath;
+@property (nonatomic,retain) NSString *filePath;
 @property (nonatomic,assign) NSTimeInterval iInterval;
-@property (nonatomic,strong) NSMutableArray *appInfos;
+@property (nonatomic,retain) NSMutableArray *appInfos;
 
 - (BCAppInfo *)getAppInfoByPath:(NSString *)path;
 - (void)cancelNewFlagForPath:(NSString *)path;
