@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32E75E34187CD21A001A3DF0 /* Notifications.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32E75E33187CD21A001A3DF0 /* Notifications.mm */; };
 		DA38603A18634B1C00C5C65E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA38603918634B1C00C5C65E /* UIKit.framework */; };
 		DA38603C18634B1C00C5C65E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA38603B18634B1C00C5C65E /* Foundation.framework */; };
 		DA38603E18634B1C00C5C65E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA38603D18634B1C00C5C65E /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32E75E33187CD21A001A3DF0 /* Notifications.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Notifications.mm; sourceTree = "<group>"; };
 		DA38603618634B1C00C5C65E /* DotSystemPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotSystemPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA38603918634B1C00C5C65E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DA38603B18634B1C00C5C65E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3860611863516400C5C65E /* Notifications.h */,
+				32E75E33187CD21A001A3DF0 /* Notifications.mm */,
 				DA3860621863528200C5C65E /* BCCurrentUsr.h */,
 				DA3860631863528200C5C65E /* BCCurrentUsr.m */,
 			);
@@ -284,6 +287,7 @@
 				DA38605F186350AD00C5C65E /* BCAppInfoManager.m in Sources */,
 				DA3860641863528200C5C65E /* BCCurrentUsr.m in Sources */,
 				DA53357118672A08006B617F /* BCAppInitializer.m in Sources */,
+				32E75E34187CD21A001A3DF0 /* Notifications.mm in Sources */,
 				DA431AAD186D98FF00E36473 /* BCContactViewController.m in Sources */,
 				DA431AB7186D997900E36473 /* BCMessageViewController.m in Sources */,
 				DA431ABC186D999400E36473 /* BCRecommendViewController.m in Sources */,

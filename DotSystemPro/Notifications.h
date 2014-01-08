@@ -9,7 +9,7 @@
 #ifndef DotSystemPro_Notifications_h
 #define DotSystemPro_Notifications_h
 
-#define LoginSuccessNotification @"__LoginSuccessNotification__"
-#define AccountChangeSuccessNotification @"__AccountChangeSuccessNotification__"
+extern NSString *const LoginSuccessNotification;
+extern NSString *const AccountChangeNotification;
 
 #endif
