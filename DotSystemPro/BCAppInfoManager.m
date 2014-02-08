@@ -23,7 +23,6 @@ static NSString *KAppInfoManagerIInterval = @"__KAppInfoManagerIInterval__";
 
 + (id)instance
 {
-    
     if (!taskQue) {
         taskQue = dispatch_queue_create("com.dotsystem.saveque", NULL);
     }
@@ -45,7 +44,7 @@ static NSString *KAppInfoManagerIInterval = @"__KAppInfoManagerIInterval__";
 
 + (NSString *)currentUsrFilePath
 {
-    NSArray *dirArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray  *dirArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDir = [dirArray objectAtIndex:0];
     NSString *filePath = [documentDir stringByAppendingPathComponent:[[BCCurrentUsr GetInstance] uin]];
     return filePath;

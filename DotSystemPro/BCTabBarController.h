@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BCTabBarController : UITabBarController
+@interface BCTabBarController : UITabBarController<UITabBarControllerDelegate>
 
 @end

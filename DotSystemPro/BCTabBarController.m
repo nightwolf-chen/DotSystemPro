@@ -25,19 +25,25 @@
         // Custom initialization
         BCMessageViewController *msgController = [[BCMessageViewController alloc] initWithNibName:nil
                                                                                            bundle:nil];
+        
         BCContactViewController *contactController = [[BCContactViewController alloc] initWithNibName:nil
                                                                                                bundle:nil];
+        
         BCRecommendViewController *recomendController = [[BCRecommendViewController alloc] initWithNibName:nil
                                                                                                     bundle:nil];
         BCSettingViewController *settingController = [[BCSettingViewController alloc] initWithNibName:nil
                                                                                                bundle:nil];
+        
         NSArray *controllers = [NSArray arrayWithObjects:msgController,contactController,recomendController,settingController, nil];
+        
         self.viewControllers = controllers;
         
         [msgController release];
         [contactController release];
         [recomendController release];
         [settingController release];
+        
+        self.delegate = self;
         
     }
     return self;
@@ -53,6 +59,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController animationControllerForTransitionFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+{
+    [UIView transitionFromView:fromVC.view toView:toVC.view duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
+    return nil;
 }
 
 @end

@@ -8,5 +8,5 @@
 #include "Notifications.h"
 
 
-NSString *const LoginSuccessNotification = @"LoginSuccessNotification";
+NSString *const LoginSuccessNotification  = @"LoginSuccessNotification";
 NSString *const AccountChangeNotification = @"AccountChangeNotification";
