@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3237130118A9D318009413AE /* BCDragablePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3237130018A9D318009413AE /* BCDragablePictureView.m */; };
+		3237130418A9D357009413AE /* BCDragSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3237130318A9D357009413AE /* BCDragSegmentView.m */; };
+		3237130718A9D3A0009413AE /* BCDragGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3237130618A9D3A0009413AE /* BCDragGroupViewController.m */; };
+		3237130A18A9E2C8009413AE /* BCDragGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3237130918A9E2C8009413AE /* BCDragGroupCell.m */; };
 		32E75E34187CD21A001A3DF0 /* Notifications.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32E75E33187CD21A001A3DF0 /* Notifications.mm */; };
 		DA38603A18634B1C00C5C65E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA38603918634B1C00C5C65E /* UIKit.framework */; };
 		DA38603C18634B1C00C5C65E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA38603B18634B1C00C5C65E /* Foundation.framework */; };
@@ -35,6 +39,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		323712FF18A9D318009413AE /* BCDragablePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDragablePictureView.h; sourceTree = "<group>"; };
+		3237130018A9D318009413AE /* BCDragablePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCDragablePictureView.m; sourceTree = "<group>"; };
+		3237130218A9D357009413AE /* BCDragSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDragSegmentView.h; sourceTree = "<group>"; };
+		3237130318A9D357009413AE /* BCDragSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCDragSegmentView.m; sourceTree = "<group>"; };
+		3237130518A9D3A0009413AE /* BCDragGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDragGroupViewController.h; sourceTree = "<group>"; };
+		3237130618A9D3A0009413AE /* BCDragGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCDragGroupViewController.m; sourceTree = "<group>"; };
+		3237130818A9E2C8009413AE /* BCDragGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDragGroupCell.h; sourceTree = "<group>"; };
+		3237130918A9E2C8009413AE /* BCDragGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCDragGroupCell.m; sourceTree = "<group>"; };
 		32E75E33187CD21A001A3DF0 /* Notifications.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Notifications.mm; sourceTree = "<group>"; };
 		DA38603618634B1C00C5C65E /* DotSystemPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotSystemPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA38603918634B1C00C5C65E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -91,6 +103,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		323712FE18A9D2BC009413AE /* drag group view */ = {
+			isa = PBXGroup;
+			children = (
+				323712FF18A9D318009413AE /* BCDragablePictureView.h */,
+				3237130018A9D318009413AE /* BCDragablePictureView.m */,
+				3237130218A9D357009413AE /* BCDragSegmentView.h */,
+				3237130318A9D357009413AE /* BCDragSegmentView.m */,
+				3237130518A9D3A0009413AE /* BCDragGroupViewController.h */,
+				3237130618A9D3A0009413AE /* BCDragGroupViewController.m */,
+				3237130818A9E2C8009413AE /* BCDragGroupCell.h */,
+				3237130918A9E2C8009413AE /* BCDragGroupCell.m */,
+			);
+			name = "drag group view";
+			sourceTree = "<group>";
+		};
 		DA35E03F18645BEC006BCAAD /* network */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +217,7 @@
 		DA53357218672B4B006B617F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				323712FE18A9D2BC009413AE /* drag group view */,
 				DA431AC3186D9AD400E36473 /* BCTabBarController.h */,
 				DA431AC4186D9AD500E36473 /* BCTabBarController.m */,
 				DA431AC5186D9AD500E36473 /* BCTabBarController.xib */,
@@ -282,13 +310,17 @@
 			files = (
 				DA38604618634B1C00C5C65E /* main.m in Sources */,
 				DA38604A18634B1C00C5C65E /* BCAppDelegate.m in Sources */,
+				3237130118A9D318009413AE /* BCDragablePictureView.m in Sources */,
 				DA3860581863504800C5C65E /* BCAppInfo.m in Sources */,
+				3237130418A9D357009413AE /* BCDragSegmentView.m in Sources */,
+				3237130718A9D3A0009413AE /* BCDragGroupViewController.m in Sources */,
 				DA38605C1863509A00C5C65E /* BCAppInfoUpdateCenter.m in Sources */,
 				DA38605F186350AD00C5C65E /* BCAppInfoManager.m in Sources */,
 				DA3860641863528200C5C65E /* BCCurrentUsr.m in Sources */,
 				DA53357118672A08006B617F /* BCAppInitializer.m in Sources */,
 				32E75E34187CD21A001A3DF0 /* Notifications.mm in Sources */,
 				DA431AAD186D98FF00E36473 /* BCContactViewController.m in Sources */,
+				3237130A18A9E2C8009413AE /* BCDragGroupCell.m in Sources */,
 				DA431AB7186D997900E36473 /* BCMessageViewController.m in Sources */,
 				DA431ABC186D999400E36473 /* BCRecommendViewController.m in Sources */,
 				DA431AC1186D99A400E36473 /* BCSettingViewController.m in Sources */,

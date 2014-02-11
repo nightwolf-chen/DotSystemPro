@@ -22,6 +22,7 @@
         UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:UITabBarSystemItemContacts];
         self.tabBarItem = item;
         [item release];
+        
     }
     return self;
 }

@@ -11,6 +11,7 @@
 #import "BCContactViewController.h"
 #import "BCRecommendViewController.h"
 #import "BCSettingViewController.h"
+#import "BCDragGroupViewController.h"
 
 @interface BCTabBarController ()
 
@@ -34,7 +35,9 @@
         BCSettingViewController *settingController = [[BCSettingViewController alloc] initWithNibName:nil
                                                                                                bundle:nil];
         
-        NSArray *controllers = [NSArray arrayWithObjects:msgController,contactController,recomendController,settingController, nil];
+        BCDragGroupViewController *dragViewController = [[BCDragGroupViewController alloc] initWithStyle:UITableViewStylePlain];
+        
+        NSArray *controllers = [NSArray arrayWithObjects:msgController,contactController,recomendController,settingController,dragViewController, nil];
         
         self.viewControllers = controllers;
         
