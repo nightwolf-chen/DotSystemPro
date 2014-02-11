@@ -15,5 +15,6 @@
 
 @property (nonatomic,assign,readonly) int segmentIndex;
 
-- (NSInteger)heightForSegment;
+- (id)initWithPictures:(NSArray *)pictures;
+
 @end

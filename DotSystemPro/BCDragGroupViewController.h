@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BCDragGroupViewController : UITableViewController<UITableViewDataSource>
+{
+    NSArray *_segments;
+}
 
+- (id)initWithStyle:(UITableViewStyle)style numberOfGroup:(int)num;
 @end

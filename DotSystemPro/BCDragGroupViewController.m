@@ -9,6 +9,7 @@
 #import "BCDragGroupViewController.h"
 #import "BCDragGroupCell.h"
 #import "BCDragSegmentView.h"
+#import "BCDragablePictureView.h"
 
 @interface BCDragGroupViewController ()
 
@@ -24,6 +25,37 @@
         UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemBookmarks tag:UITabBarSystemItemBookmarks];
         self.tabBarItem = tabBarItem;
         [tabBarItem release];
+    }
+    return self;
+}
+
+- (id)initWithStyle:(UITableViewStyle)style numberOfGroup:(int)num
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        
+        NSMutableArray *tmpArray = [NSMutableArray array];
+        
+        while (num && num-- > 0) {
+            
+            int picturesNumber = 7 ;
+            NSMutableArray *randomPictures = [NSMutableArray array];
+            while (picturesNumber --) {
+                BCDragablePictureView *picture = [[BCDragablePictureView alloc] initPlanePicture];
+                [randomPictures addObject:picture];
+                [picture release];
+            }
+            
+            BCDragSegmentView *view = [[BCDragSegmentView alloc] initWithPictures:randomPictures];
+            [tmpArray addObject:view];
+            [view release];
+            
+        }
+        
+        _segments = [[NSArray arrayWithArray:tmpArray] retain];
+        
+        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+       
     }
     return self;
 }
@@ -47,27 +79,27 @@
     static NSString *identifier = @"segmentCell";
     BCDragGroupCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        BCDragSegmentView *segmentView = [[BCDragSegmentView alloc] init];
+        BCDragSegmentView *segmentView = [_segments objectAtIndex:[indexPath row]];
         cell = [[BCDragGroupCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier segmentView:segmentView];
+        [cell autorelease];
     }
-    
-    return [cell autorelease];
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BCDragGroupCell *cell = (BCDragGroupCell *)[tableView cellForRowAtIndexPath:indexPath];
-    return cell.frame.size.height;
+    BCDragSegmentView *view = [_segments objectAtIndex:[indexPath row]];
+    return view.frame.size.height;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [_segments count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 1;
 }
 
 @end

@@ -10,6 +10,11 @@
 
 @interface BCDragablePictureView : UIView
 
+@property (nonatomic,strong) UIColor *backgroundColor;
+
 - (id)initPlanePicture;
+
++ (NSInteger)pictureHeight;
++ (NSInteger)pictureWidth;
 
 @end

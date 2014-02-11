@@ -26,6 +26,7 @@
     if (self) {
         // Initialization code
         _dragSegment = [segmentView retain];
+        [self.contentView addSubview:_dragSegment];
     }
     return self;}
 

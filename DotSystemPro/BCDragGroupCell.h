@@ -15,4 +15,5 @@
 @property (nonatomic,strong) BCDragSegmentView *dragSegment;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier segmentView:(BCDragSegmentView *)segmentView;
+
 @end

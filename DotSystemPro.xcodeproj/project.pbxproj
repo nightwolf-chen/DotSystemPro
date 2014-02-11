@@ -110,10 +110,10 @@
 				3237130018A9D318009413AE /* BCDragablePictureView.m */,
 				3237130218A9D357009413AE /* BCDragSegmentView.h */,
 				3237130318A9D357009413AE /* BCDragSegmentView.m */,
-				3237130518A9D3A0009413AE /* BCDragGroupViewController.h */,
-				3237130618A9D3A0009413AE /* BCDragGroupViewController.m */,
 				3237130818A9E2C8009413AE /* BCDragGroupCell.h */,
 				3237130918A9E2C8009413AE /* BCDragGroupCell.m */,
+				3237130518A9D3A0009413AE /* BCDragGroupViewController.h */,
+				3237130618A9D3A0009413AE /* BCDragGroupViewController.m */,
 			);
 			name = "drag group view";
 			sourceTree = "<group>";

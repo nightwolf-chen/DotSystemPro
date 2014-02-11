@@ -35,9 +35,9 @@
         BCSettingViewController *settingController = [[BCSettingViewController alloc] initWithNibName:nil
                                                                                                bundle:nil];
         
-        BCDragGroupViewController *dragViewController = [[BCDragGroupViewController alloc] initWithStyle:UITableViewStylePlain];
+        BCDragGroupViewController *dragViewController = [[BCDragGroupViewController alloc] initWithStyle:UITableViewStylePlain numberOfGroup:2];
         
-        NSArray *controllers = [NSArray arrayWithObjects:msgController,contactController,recomendController,settingController,dragViewController, nil];
+        NSArray *controllers = [NSArray arrayWithObjects:msgController,contactController,recomendController,dragViewController,settingController, nil];
         
         self.viewControllers = controllers;
         
@@ -45,6 +45,7 @@
         [contactController release];
         [recomendController release];
         [settingController release];
+        [dragViewController release];
         
         self.delegate = self;
         

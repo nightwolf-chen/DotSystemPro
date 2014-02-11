@@ -8,8 +8,8 @@
 
 #import "BCDragablePictureView.h"
 
-const int defaultWidth = 40;
-const int defaultHeight = 40;
+const int defaultWidth = 45;
+const int defaultHeight = 45;
 
 @implementation BCDragablePictureView
 
@@ -28,8 +28,14 @@ const int defaultHeight = 40;
     self = [super initWithFrame:CGRectMake(0, 0, defaultWidth,defaultHeight)];
     if (self) {
         
-        UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(paned)];
+        UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(paned:)];
         [self addGestureRecognizer:panRecognizer];
+        
+        double randomR = (double)(arc4random() % 255 ) / 255.0 ;
+        double randomG = (double)(arc4random() % 255 ) / 255.0 ;
+        double randomB = (double)(arc4random() % 255 ) / 255.0 ;
+        
+        _backgroundColor = [[UIColor colorWithRed:randomR green:randomG blue:randomB alpha:1] retain];
         
     }
     return self;
@@ -42,25 +48,34 @@ const int defaultHeight = 40;
 {
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    double randomR = (double)(random() % 255) / 255.0;
-    double randomG = (double)(random() % 255) / 255.0;
-    double randomB = (double)(random() % 255) / 255.0;
-    
-    UIColor *randomColor = [UIColor colorWithRed:randomR green:randomG blue:randomB alpha:1];
-    
-    CGContextSetFillColorWithColor(context, randomColor.CGColor);
-    
+    CGContextSetFillColorWithColor(context, _backgroundColor.CGColor);
     CGContextFillRect(context, rect);
     
 }
 
 #pragma mark - draged
 
-- (void)paned
+- (void)paned:(UIPanGestureRecognizer *)recognizer
 {
-    [self convertPoint:self.center fromView:nil];
+    CGPoint curPoint = [recognizer locationInView:nil];
+    
+    [UIView animateWithDuration:0.1 animations:^{
+        
+        self.center = curPoint;
+        
+    }];
+    
+    NSLog(@"picture paned!");
 }
 
++ (NSInteger)pictureHeight
+{
+    return defaultHeight;
+}
+
++ (NSInteger)pictureWidth
+{
+    return defaultWidth;
+}
 
 @end
