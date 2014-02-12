@@ -57,15 +57,54 @@ const int defaultHeight = 45;
 
 - (void)paned:(UIPanGestureRecognizer *)recognizer
 {
-    CGPoint curPoint = [recognizer locationInView:nil];
+    static CGPoint oriLoc;
     
-    [UIView animateWithDuration:0.1 animations:^{
-        
-        self.center = curPoint;
-        
-    }];
+    switch (recognizer.state) {
+        case UIGestureRecognizerStateBegan:
+        {
+            oriLoc = self.center;
+            break;
+        }
+        case UIGestureRecognizerStateChanged:
+        {
+            CGPoint curPoint = [recognizer locationInView:self.superview];
+            [UIView animateWithDuration:0.1 animations:^{
+                
+                self.center = curPoint;
+                
+            }];
+            
+            break;
+        }
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateFailed:
+        {
+            [UIView animateWithDuration:0.1 animations:^{
+                
+                self.center = oriLoc;
+                
+            }];
+
+            break;
+        }
+        case UIGestureRecognizerStateEnded:
+        {
+            [UIView animateWithDuration:0.1 animations:^{
+                
+                self.center = oriLoc;
+                
+            }];
+            
+            break;
+        }
+        case UIGestureRecognizerStatePossible:
+        {
+            break;
+        }
+            
+    }
     
-    NSLog(@"picture paned!");
+    
 }
 
 + (NSInteger)pictureHeight
