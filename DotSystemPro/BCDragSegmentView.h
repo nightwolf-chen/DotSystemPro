@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BCDragablePictureViewDelegate.h"
 
-@interface BCDragSegmentView : UIView
+@interface BCDragSegmentView : UIView<BCDragablePictureViewDelegate>
 {
     NSMutableArray *_pictures;
 }

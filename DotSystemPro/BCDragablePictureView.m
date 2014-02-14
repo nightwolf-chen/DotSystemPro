@@ -8,8 +8,8 @@
 
 #import "BCDragablePictureView.h"
 
-const int defaultWidth = 45;
-const int defaultHeight = 45;
+static const int defaultWidth = 45;
+static const int defaultHeight = 45;
 
 @implementation BCDragablePictureView
 
@@ -35,7 +35,10 @@ const int defaultHeight = 45;
         double randomG = (double)(arc4random() % 255 ) / 255.0 ;
         double randomB = (double)(arc4random() % 255 ) / 255.0 ;
         
-        _backgroundColor = [[UIColor colorWithRed:randomR green:randomG blue:randomB alpha:1] retain];
+        _backgroundColor = [[UIColor colorWithRed:randomR
+                                            green:randomG
+                                             blue:randomB
+                                            alpha:1] retain];
         
     }
     return self;
@@ -60,6 +63,7 @@ const int defaultHeight = 45;
     static CGPoint oriLoc;
     
     switch (recognizer.state) {
+            
         case UIGestureRecognizerStateBegan:
         {
             oriLoc = self.center;
@@ -88,15 +92,6 @@ const int defaultHeight = 45;
             break;
         }
         case UIGestureRecognizerStateEnded:
-        {
-            [UIView animateWithDuration:0.1 animations:^{
-                
-                self.center = oriLoc;
-                
-            }];
-            
-            break;
-        }
         case UIGestureRecognizerStatePossible:
         {
             break;
@@ -104,8 +99,12 @@ const int defaultHeight = 45;
             
     }
     
+    [[self delegate] pictureViewPaned:self recognizer:recognizer];
+    
     
 }
+
+
 
 + (NSInteger)pictureHeight
 {
@@ -115,6 +114,15 @@ const int defaultHeight = 45;
 + (NSInteger)pictureWidth
 {
     return defaultWidth;
+}
+
+- (BOOL)isConflictWithPicture:(BCDragablePictureView *)aPicture
+{
+    if (abs(self.center.x - aPicture.center.x) < defaultWidth && abs(self.center.y-aPicture.center.y) < defaultHeight) {
+        return YES;
+    }
+    
+    return NO;
 }
 
 @end

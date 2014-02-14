@@ -39,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32186ED918AE678400F09804 /* BCDragablePictureViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCDragablePictureViewDelegate.h; sourceTree = "<group>"; };
 		323712FF18A9D318009413AE /* BCDragablePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDragablePictureView.h; sourceTree = "<group>"; };
 		3237130018A9D318009413AE /* BCDragablePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCDragablePictureView.m; sourceTree = "<group>"; };
 		3237130218A9D357009413AE /* BCDragSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDragSegmentView.h; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 			children = (
 				323712FF18A9D318009413AE /* BCDragablePictureView.h */,
 				3237130018A9D318009413AE /* BCDragablePictureView.m */,
+				32186ED918AE678400F09804 /* BCDragablePictureViewDelegate.h */,
 				3237130218A9D357009413AE /* BCDragSegmentView.h */,
 				3237130318A9D357009413AE /* BCDragSegmentView.m */,
 				3237130818A9E2C8009413AE /* BCDragGroupCell.h */,

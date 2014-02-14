@@ -42,25 +42,11 @@ static const int gapWidth = 10;
     
     if (self) {
         _pictures = [[NSMutableArray alloc] initWithArray:pictures];
+        for(BCDragablePictureView *picture in _pictures){
+            picture.delegate = self;
         
-        for (int i = 0; i < [_pictures count]; i++) {
-            
-            int y = (i / picturesPerLine);
-            int x = (i % picturesPerLine);
-            
-            y = (gapHeight + [BCDragablePictureView pictureHeight])*y + gapHeight*2;
-            x = (gapWidth + [BCDragablePictureView pictureWidth])*x + gapWidth*2;
-            
-            BCDragablePictureView *pictureView = [_pictures objectAtIndex:i];
-            CGRect frame = pictureView.frame;
-            frame.origin = CGPointMake(x, y);
-            pictureView.frame = frame;
-            
-            [self addSubview:pictureView];
-            
         }
-        
-        [self updateFrame];
+        [self updatePicturesPosition];
     }
     
     return self;
@@ -83,12 +69,37 @@ static const int gapWidth = 10;
         } completion:^(BOOL finished){
             
             
-            
         }];
         
     }
 }
 
+- (void)updatePicturesPosition
+{
+    for (int i = 0; i < [_pictures count]; i++) {
+        
+        BCDragablePictureView *pictureView = [_pictures objectAtIndex:i];
+        CGRect frame = pictureView.frame;
+        frame.origin = [self centerForPictureAtIndex:i];
+        pictureView.frame = frame;
+        
+        [self addSubview:pictureView];
+        
+    }
+    
+    [self updateFrame];
+}
+
+- (CGPoint)centerForPictureAtIndex:(int)index
+{
+    int y = (index / picturesPerLine);
+    int x = (index % picturesPerLine);
+    
+    y = (gapHeight + [BCDragablePictureView pictureHeight])*y + gapHeight*2;
+    x = (gapWidth + [BCDragablePictureView pictureWidth])*x + gapWidth*2;
+    
+    return CGPointMake(x, y);
+}
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
@@ -96,17 +107,21 @@ static const int gapWidth = 10;
     // Drawing code
     double bWidth = 10 ;
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
     CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
-    
     CGContextFillRect(context, rect);
-    
     CGContextSetFillColorWithColor(context, [UIColor grayColor].CGColor);
-    
     CGRect contentRect = CGRectMake(bWidth,bWidth, rect.size.width-2*bWidth, rect.size.height-2*bWidth);
-    
     CGContextFillRect(context, contentRect);
     
 }
+
+#pragma mark - picture view delegate
+
+- (void)pictureViewPaned:(BCDragablePictureView *)picture recognizer:(UIPanGestureRecognizer *)recognizer
+{
+    NSLog(@"delegate called!");
+}
+
+
 
 @end

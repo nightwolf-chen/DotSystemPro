@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BCDragablePictureViewDelegate.h"
 
 @interface BCDragablePictureView : UIView
 
 @property (nonatomic,strong) UIColor *backgroundColor;
+@property (nonatomic,strong) id<BCDragablePictureViewDelegate> delegate;
 
 - (id)initPlanePicture;
+- (BOOL)isConflictWithPicture:(BCDragablePictureView *)aPicture;
 
 + (NSInteger)pictureHeight;
 + (NSInteger)pictureWidth;
 
 @end
+
