@@ -118,7 +118,12 @@ static const int defaultHeight = 45;
 
 - (BOOL)isConflictWithPicture:(BCDragablePictureView *)aPicture
 {
-    if (abs(self.center.x - aPicture.center.x) < defaultWidth && abs(self.center.y-aPicture.center.y) < defaultHeight) {
+    return [self isConflictWithPicWithCenter:aPicture.center];
+}
+
+- (BOOL)isConflictWithPicWithCenter:(CGPoint)aCenter
+{
+    if (abs(self.center.x - aCenter.x) < defaultWidth && abs(self.center.y-aCenter.y) < defaultHeight) {
         return YES;
     }
     

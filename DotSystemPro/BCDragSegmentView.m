@@ -42,9 +42,10 @@ static const int gapWidth = 10;
     
     if (self) {
         _pictures = [[NSMutableArray alloc] initWithArray:pictures];
+        _pictureNum = [_pictures count];
         for(BCDragablePictureView *picture in _pictures){
             picture.delegate = self;
-        
+             [self addSubview:picture];
         }
         [self updatePicturesPosition];
     }
@@ -66,9 +67,6 @@ static const int gapWidth = 10;
             
             self.frame = frame;
             
-        } completion:^(BOOL finished){
-            
-            
         }];
         
     }
@@ -81,12 +79,31 @@ static const int gapWidth = 10;
         BCDragablePictureView *pictureView = [_pictures objectAtIndex:i];
         CGRect frame = pictureView.frame;
         frame.origin = [self centerForPictureAtIndex:i];
-        pictureView.frame = frame;
-        
-        [self addSubview:pictureView];
+        [UIView animateWithDuration:0.5 animations:^{
+            pictureView.frame = frame;
+        }];
         
     }
     
+    [self updateFrame];
+}
+
+- (void)updatePicturesPositionWithExceptions:(NSIndexSet *)indexes
+{
+    for (int i = 0; i < [_pictures count]; i++) {
+        
+        if ([indexes containsIndex:i]) {
+            continue;
+        }
+        
+        BCDragablePictureView *pictureView = [_pictures objectAtIndex:i];
+        CGRect frame = pictureView.frame;
+        frame.origin = [self centerForPictureAtIndex:i];
+        [UIView animateWithDuration:0.5 animations:^{
+            pictureView.frame = frame;
+        }];
+        
+    }
     [self updateFrame];
 }
 
@@ -120,6 +137,56 @@ static const int gapWidth = 10;
 - (void)pictureViewPaned:(BCDragablePictureView *)picture recognizer:(UIPanGestureRecognizer *)recognizer
 {
     NSLog(@"delegate called!");
+    
+    static NSUInteger index;
+
+    switch (recognizer.state) {
+        case UIGestureRecognizerStateBegan:
+        {
+            index = [_pictures indexOfObject:picture];
+        }
+            break;
+        case UIGestureRecognizerStateChanged:
+        {
+            if (![picture isConflictWithPicWithCenter:[self centerForPictureAtIndex:index]]) {
+                if ([_pictures containsObject:picture]) {
+                    [_pictures removeObject:picture];
+                    [self updatePicturesPosition];
+                }
+            }
+            
+            for(int i = 0 ; i < [_pictures count] ; i++){
+                BCDragablePictureView *anotherPic = [_pictures objectAtIndex:i];
+                if ([picture isConflictWithPicture:anotherPic] && ![_pictures containsObject:picture]) {
+                    [_pictures insertObject:picture atIndex:i];
+                    index = i;
+                    NSIndexSet *indexes = [NSIndexSet indexSetWithIndex:i];
+                    [self updatePicturesPositionWithExceptions:indexes];
+                    break;
+                }
+            }
+        }
+            break;
+        case UIGestureRecognizerStateEnded:
+        {
+            [self updatePicturesPosition];
+        }
+            break;
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateFailed:
+        {
+            if ([_pictures count] < _pictureNum) {
+                [_pictures insertObject:picture atIndex:index];
+            }
+        }
+            break;
+        case UIGestureRecognizerStatePossible:
+        {
+            //do nothing
+        }
+            break;
+            
+    }
 }
 
 

@@ -12,6 +12,6 @@
 
 @protocol BCDragablePictureViewDelegate <NSObject>
 
-@required -(void)pictureViewPaned:(BCDragablePictureView *)picture
-                       recognizer:(UIPanGestureRecognizer *)recognizer;
+@required - (void)pictureViewPaned:(BCDragablePictureView *)picture
+                        recognizer:(UIPanGestureRecognizer *)recognizer;
 @end

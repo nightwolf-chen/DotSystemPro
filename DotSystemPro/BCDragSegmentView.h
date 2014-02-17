@@ -15,6 +15,7 @@
 }
 
 @property (nonatomic,assign,readonly) int segmentIndex;
+@property (nonatomic,assign,readonly) int pictureNum;
 
 - (id)initWithPictures:(NSArray *)pictures;
 

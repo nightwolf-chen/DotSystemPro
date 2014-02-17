@@ -16,6 +16,7 @@
 
 - (id)initPlanePicture;
 - (BOOL)isConflictWithPicture:(BCDragablePictureView *)aPicture;
+- (BOOL)isConflictWithPicWithCenter:(CGPoint)aCenter;
 
 + (NSInteger)pictureHeight;
 + (NSInteger)pictureWidth;
