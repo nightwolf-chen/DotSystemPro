@@ -60,15 +60,10 @@ static const int defaultHeight = 45;
 
 - (void)paned:(UIPanGestureRecognizer *)recognizer
 {
-    static CGPoint oriLoc;
     
     switch (recognizer.state) {
             
         case UIGestureRecognizerStateBegan:
-        {
-            oriLoc = self.center;
-            break;
-        }
         case UIGestureRecognizerStateChanged:
         {
             CGPoint curPoint = [recognizer locationInView:self.superview];
@@ -82,15 +77,6 @@ static const int defaultHeight = 45;
         }
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateFailed:
-        {
-            [UIView animateWithDuration:0.1 animations:^{
-                
-                self.center = oriLoc;
-                
-            }];
-
-            break;
-        }
         case UIGestureRecognizerStateEnded:
         case UIGestureRecognizerStatePossible:
         {
@@ -100,7 +86,6 @@ static const int defaultHeight = 45;
     }
     
     [[self delegate] pictureViewPaned:self recognizer:recognizer];
-    
     
 }
 
@@ -123,7 +108,7 @@ static const int defaultHeight = 45;
 
 - (BOOL)isConflictWithPicWithCenter:(CGPoint)aCenter
 {
-    if (abs(self.center.x - aCenter.x) < defaultWidth && abs(self.center.y-aCenter.y) < defaultHeight) {
+    if (abs(self.center.x - aCenter.x) <= defaultWidth && abs(self.center.y-aCenter.y) <= defaultHeight) {
         return YES;
     }
     

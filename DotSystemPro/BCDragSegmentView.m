@@ -136,11 +136,10 @@ static const int gapWidth = 10;
 
 - (void)pictureViewPaned:(BCDragablePictureView *)picture recognizer:(UIPanGestureRecognizer *)recognizer
 {
-    NSLog(@"delegate called!");
-    
     static NSUInteger index;
 
     switch (recognizer.state) {
+            
         case UIGestureRecognizerStateBegan:
         {
             index = [_pictures indexOfObject:picture];
@@ -155,29 +154,41 @@ static const int gapWidth = 10;
                 }
             }
             
+         
+            float minDist = -1 ;
+            int minDistIndex = -1;
             for(int i = 0 ; i < [_pictures count] ; i++){
                 BCDragablePictureView *anotherPic = [_pictures objectAtIndex:i];
                 if ([picture isConflictWithPicture:anotherPic] && ![_pictures containsObject:picture]) {
-                    [_pictures insertObject:picture atIndex:i];
-                    index = i;
-                    NSIndexSet *indexes = [NSIndexSet indexSetWithIndex:i];
-                    [self updatePicturesPositionWithExceptions:indexes];
-                    break;
+                    
+                    float tx = picture.center.x - anotherPic.center.x;
+                    float ty = picture.center.y - anotherPic.center.y;
+                    float tDist = tx*tx + ty*ty;
+                    
+                    if (minDist < 0 || minDist > tDist) {
+                        minDistIndex = i;
+                        minDist = tDist;
+                    }
                 }
             }
-        }
-            break;
-        case UIGestureRecognizerStateEnded:
-        {
-            [self updatePicturesPosition];
-        }
+            
+            if (minDistIndex >= 0) {
+                    [_pictures insertObject:picture atIndex:minDistIndex];
+                    index = minDistIndex;
+                    NSIndexSet *indexes = [NSIndexSet indexSetWithIndex:minDistIndex];
+                    [self updatePicturesPositionWithExceptions:indexes];
+            }
+            
+    }
             break;
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateFailed:
+        case UIGestureRecognizerStateEnded:
         {
             if ([_pictures count] < _pictureNum) {
                 [_pictures insertObject:picture atIndex:index];
             }
+            [self updatePicturesPosition];
         }
             break;
         case UIGestureRecognizerStatePossible:
@@ -187,6 +198,7 @@ static const int gapWidth = 10;
             break;
             
     }
+
 }
 
 
