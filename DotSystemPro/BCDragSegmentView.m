@@ -45,7 +45,7 @@ static const int gapWidth = 10;
         _pictureNum = [_pictures count];
         for(BCDragablePictureView *picture in _pictures){
             picture.delegate = self;
-             [self addSubview:picture];
+            [self addSubview:picture];
         }
         [self updatePicturesPosition];
     }
@@ -77,10 +77,8 @@ static const int gapWidth = 10;
     for (int i = 0; i < [_pictures count]; i++) {
         
         BCDragablePictureView *pictureView = [_pictures objectAtIndex:i];
-        CGRect frame = pictureView.frame;
-        frame.origin = [self centerForPictureAtIndex:i];
         [UIView animateWithDuration:0.5 animations:^{
-            pictureView.frame = frame;
+            pictureView.center = [self centerForPictureAtIndex:i];
         }];
         
     }
@@ -97,10 +95,8 @@ static const int gapWidth = 10;
         }
         
         BCDragablePictureView *pictureView = [_pictures objectAtIndex:i];
-        CGRect frame = pictureView.frame;
-        frame.origin = [self centerForPictureAtIndex:i];
         [UIView animateWithDuration:0.5 animations:^{
-            pictureView.frame = frame;
+            pictureView.center = [self centerForPictureAtIndex:i];
         }];
         
     }
@@ -115,7 +111,7 @@ static const int gapWidth = 10;
     y = (gapHeight + [BCDragablePictureView pictureHeight])*y + gapHeight*2;
     x = (gapWidth + [BCDragablePictureView pictureWidth])*x + gapWidth*2;
     
-    return CGPointMake(x, y);
+    return CGPointMake(x+[BCDragablePictureView pictureWidth]/2, y+[BCDragablePictureView pictureHeight]/2);
 }
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -179,7 +175,8 @@ static const int gapWidth = 10;
                     [self updatePicturesPositionWithExceptions:indexes];
             }
             
-    }
+            
+        }
             break;
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateFailed:
@@ -196,7 +193,7 @@ static const int gapWidth = 10;
             //do nothing
         }
             break;
-            
+                
     }
 
 }
