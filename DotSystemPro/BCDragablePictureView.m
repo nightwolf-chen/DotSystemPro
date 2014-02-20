@@ -108,7 +108,7 @@ static const int defaultHeight = 45;
 
 - (BOOL)isConflictWithPicWithCenter:(CGPoint)aCenter
 {
-    if (abs(self.center.x - aCenter.x) <= defaultWidth && abs(self.center.y-aCenter.y) <= defaultHeight) {
+    if (2*abs(self.center.x - aCenter.x) <= self.frame.size.width + defaultWidth && 2*abs(self.center.y-aCenter.y) <= self.frame.size.height + defaultHeight) {
         return YES;
     }
     

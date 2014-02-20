@@ -77,8 +77,13 @@ static const int gapWidth = 10;
     for (int i = 0; i < [_pictures count]; i++) {
         
         BCDragablePictureView *pictureView = [_pictures objectAtIndex:i];
+        CGRect rect = pictureView.frame;
+        rect.size.width = [BCDragablePictureView pictureWidth];
+        rect.size.height = [BCDragablePictureView pictureHeight];
         [UIView animateWithDuration:0.5 animations:^{
+            pictureView.frame = rect;
             pictureView.center = [self centerForPictureAtIndex:i];
+            pictureView.alpha = 1;
         }];
         
     }
@@ -95,8 +100,13 @@ static const int gapWidth = 10;
         }
         
         BCDragablePictureView *pictureView = [_pictures objectAtIndex:i];
+        CGRect rect = pictureView.frame;
+        rect.size.width = [BCDragablePictureView pictureWidth];
+        rect.size.height = [BCDragablePictureView pictureHeight];
         [UIView animateWithDuration:0.5 animations:^{
+            pictureView.frame = rect;
             pictureView.center = [self centerForPictureAtIndex:i];
+            pictureView.alpha = 1;
         }];
         
     }
@@ -139,6 +149,17 @@ static const int gapWidth = 10;
         case UIGestureRecognizerStateBegan:
         {
             index = [_pictures indexOfObject:picture];
+            
+            //对进行拖动的图片进行形态改变并且放到view的最前端。
+            [self bringSubviewToFront:picture];
+            CGRect frame = picture.frame;
+            frame.size.height *= 1.25;
+            frame.size.width *= 1.25;
+            [UIView animateWithDuration:0.5 animations:^{
+                picture.alpha = 0.75;
+                picture.frame = frame;
+            }];
+            
         }
             break;
         case UIGestureRecognizerStateChanged:
@@ -191,6 +212,7 @@ static const int gapWidth = 10;
                 [_pictures insertObject:picture atIndex:index];
             }
             [self updatePicturesPosition];
+            
         }
             break;
         case UIGestureRecognizerStatePossible:
