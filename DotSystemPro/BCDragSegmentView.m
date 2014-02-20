@@ -143,6 +143,7 @@ static const int gapWidth = 10;
             break;
         case UIGestureRecognizerStateChanged:
         {
+            //如果图片偏离了原来的位置并且还存在在列表当中则将其从列表中移除并且使用动画将还在列表中的图片重新调整位置
             if (![picture isConflictWithPicWithCenter:[self centerForPictureAtIndex:index]]) {
                 if ([_pictures containsObject:picture]) {
                     [_pictures removeObject:picture];
@@ -151,6 +152,8 @@ static const int gapWidth = 10;
             }
             
          
+            //下面这部分代码将已经脱离列表的那张图片和列表里面的每一张图片进行碰撞检测，并且选出距离与之最近的一张
+            //使用动画来产生插入的效果
             float minDist = -1 ;
             int minDistIndex = -1;
             for(int i = 0 ; i < [_pictures count] ; i++){
@@ -182,6 +185,8 @@ static const int gapWidth = 10;
         case UIGestureRecognizerStateFailed:
         case UIGestureRecognizerStateEnded:
         {
+            //拖动结束，取消或者失败的时候需要对还未完成的动作进行复原
+            //并且做最后的位置调整
             if ([_pictures count] < _pictureNum) {
                 [_pictures insertObject:picture atIndex:index];
             }
